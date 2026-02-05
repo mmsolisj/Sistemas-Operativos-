@@ -5,10 +5,11 @@ using namespace std;
 
 int main() {
 
-	ofstream file("tarea1.txt");
+	ofstream file;
+	file.open("tarea1.txt");
 	if (file.is_open()) {
-		file << "Hellooooo\n"; 
-		file << "Aufwiedersehen\n";
+		file.write("Hellooooo\n",10); 
+		file.write( "Aufwiedersehen\n",15);
 		file.close(); 
 		cout << "Archivo modiifcado";
 
